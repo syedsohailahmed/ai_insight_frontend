@@ -22,12 +22,12 @@
 
     <!-- Summary -->
     <section class="mb-4">
-      <h2 class="text-m font-semibold text-gray-700 mb-1">Summary</h2>
+      <h2 class="text-sm font-semibold text-gray-700 mb-1">Summary</h2>
       <p class="text-sm text-gray-800">{{ analysisData.analysis.summary }}</p>
     </section>
 
     <!-- Pros & Cons -->
-    <section class="grid grid-cols-2 gap-3 mb-4">
+    <section class="flex flex-col mb-4">
       <div class="bg-green-50 p-3 rounded">
         <h3 class="text-sm font-semibold text-green-700 mb-1">Pros</h3>
         <ul class="list-disc list-inside text-sm text-gray-800">
@@ -36,8 +36,8 @@
         </ul>
       </div>
 
-      <div class="bg-red-50 p-3 rounded">
-        <h3 class="text-m font-semibold text-red-700 mb-1">Cons</h3>
+      <div class="bg-red-50 p-3 rounded mt-1">
+        <h3 class="text-sm font-semibold text-red-700 mb-1">Cons</h3>
         <ul class="list-disc list-inside text-sm text-gray-800">
           <li v-for="(c, i) in analysisData.analysis.cons" :key="'con-' + i">{{ c }}</li>
           <li v-if="!analysisData.analysis.cons.length" class="text-gray-500">No cons detected</li>
@@ -47,22 +47,16 @@
 
     <!-- Hidden Issues & Alternatives -->
     <section class="mb-4">
-      <h3 class="text-m font-semibold text-gray-700">Hidden issues</h3>
+      <h3 class="text-sm font-semibold text-gray-700">Hidden Issues</h3>
       <ul class="list-disc list-inside text-sm text-gray-800 mb-2">
         <li v-for="(h, i) in analysisData.analysis.hiddenIssues" :key="'hid-' + i">{{ h }}</li>
         <li v-if="!analysisData.analysis.hiddenIssues.length" class="text-gray-500">None found</li>
       </ul>
-
-      <!-- <h3 class="text-sm font-semibold text-gray-700">Alternatives</h3>
-      <ul class="list-disc list-inside text-sm text-gray-800">
-        <li v-for="(a, i) in analysisData.analysis.alternatives" :key="'alt-' + i">{{ a }}</li>
-        <li v-if="!analysisData.analysis.alternatives.length" class="text-gray-500">No alternatives suggested</li>
-      </ul> -->
     </section>
 
     <!-- Price insight -->
     <section class="mb-4">
-      <h3 class="text-m font-semibold text-gray-700">Price insight</h3>
+      <h3 class="text-sm font-semibold text-gray-700">Price Insight</h3>
       <p class="text-sm text-gray-800">{{ analysisData.analysis.priceInsight }}</p>
     </section>
 
@@ -70,9 +64,9 @@
 
     <!-- Review Summary -->
     <section class="mb-4">
-      <h3 class="text-m font-semibold text-gray-700 mb-2">Review Summary</h3>
+      <h3 class="text-sm font-semibold text-gray-700 mb-2">Summarized Product Rating</h3>
 
-      <div class="grid grid-cols-2 gap-3">
+      <div class="flex flex-col">
         <div class="bg-green-50 p-3 rounded">
           <div class="text-xs text-green-700 font-semibold mb-1">Pros</div>
           <div class="text-sm text-gray-800">
@@ -83,7 +77,7 @@
           </div>
         </div>
 
-        <div class="bg-red-50 p-3 rounded">
+        <div class="bg-red-50 p-3 rounded mt-2">
           <div class="text-xs text-red-700 font-semibold mb-1">Cons</div>
           <div class="text-sm text-gray-800">
             <ul class="list-disc list-inside">
@@ -104,7 +98,7 @@
 
     <!-- Similar products -->
     <section>
-      <h3 class="text-sm font-semibold text-gray-700 mb-2">Similar products</h3>
+      <h3 class="text-sm font-semibold text-gray-700 mb-2">Similar & Recommended Products</h3>
       <ul class="space-y-2 max-h-40 overflow-auto">
         <li v-for="(s, i) in analysisData.similar" :key="'sim-' + i" class="p-2 rounded hover:bg-gray-50">
           <a :href="s.url" target="_blank" class="flex items-start gap-3">
