@@ -5,7 +5,7 @@
 
 
     <!-- Loading -->
-    <div v-if="loading" class="text-center text-blue-500 mb-4">
+    <div v-if="loading" class="text-center text-blue-500 mt-4 mb-4">
       Analyzing product...
     </div>
 
