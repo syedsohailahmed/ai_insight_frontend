@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "AI Product Insights",
+  "version": "1.0",
+  "description": "Analyze product and summarize reviews",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
