@@ -90,7 +90,7 @@
 
       <div class="mt-3 text-sm text-gray-700">
         <span class="font-semibold">Aggregated rating:</span>
-        <span class="ml-2">{{ analysisData.reviewSummary.rating }}/10</span>
+        <span class="ml-2">{{ analysisData.reviewSummary.rating }}/5</span>
       </div>
     </section>
 
