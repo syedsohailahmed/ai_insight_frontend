@@ -1,6 +1,6 @@
 <template>
   <div class="w-96 p-4 bg-white shadow-lg rounded-xl font-sans">
-    <h2 class="text-xl font-bold text-gray-800 text-center">AI Product Insights</h2>
+    <h2 class="text-xl font-bold text-gray-800 text-center">AI Product Analyzer</h2>
     <p class="text-m text-gray-500 mt-1 text-center">Quick insights & similar items</p>
 
 
@@ -8,6 +8,12 @@
     <div v-if="loading" class="text-center text-blue-500 mt-4 mb-4">
       Analyzing product...
     </div>
+
+    <p v-if="!loading" class="text-sm text-justify text-gray-700 mt-4 mb-4">
+      <span class="font-bold">AI Product Analyzer </span>helps you instantly understand any product you’re viewing. It summarizes real customer reviews
+      from that exact page, highlights pros & cons, generates an overall verdict, and even finds similar products using
+      AI-powered vector search. No more scrolling — get clear insights in seconds.
+    </p>
 
     <!-- Error -->
     <div v-if="error" class="bg-red-100 text-red-700 p-2 rounded mb-4 text-sm text-center">
