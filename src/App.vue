@@ -26,12 +26,10 @@
 </template>
 
 <script setup>
-import { ref, onUnmounted, onMounted } from "vue";
+import { ref } from "vue";
 import AnalysisCard from "./AnalysisCard.vue";
 
 const result = ref(null);
-// const similar = ref([]);
-// const reviewsSummary = ref(null);
 const loading = ref(false);
 const error = ref(null);
 
@@ -86,64 +84,59 @@ async function analyzeProduct() {
     loading.value = false;
   }
 }
-// onUnmounted(() => {
-//   result.value = null;
-//   loading.value = false;
-//   error.value = null;
-// })
 
-onMounted(() => {
-  result.value = {
-    analysis: {
-      summary:
-        "Deeply discounted men’s waterproof/hiker-style boots with solid reviews but unclear branding due to mixed product info.",
-      pros: [
-        "Very low price at $19.99",
-        "High original MSRP ($210) implies strong value if authentic",
-        "4.2 rating across 500+ reviews",
-        "Waterproof/hiker design suitable for varied weather"
-      ],
-      cons: [
-        "Brand confusion between Timberland and Weatherproof Vintage",
-        "Possible mismatch between title and actual product",
-        "Deep discount may indicate limited sizes, colors, or overstock"
-      ],
-      hiddenIssues: [
-        "Potential listing error due to conflicting product names",
-        "Authenticity or model accuracy needs verification",
-        "Return policy and warranty unclear"
-      ],
-      alternatives: [
-        "Levi's hiking or work boots",
-        "Timberland official 6-inch Premium Boots directly from Timberland",
-        "Weatherproof Vintage Jace Hiker Boots from verified retailers"
-      ],
-      priceInsight:
-        "A 75% discount down to $19.99 is unusually low for any boot originally listed at $210, strongly suggesting clearance or last-season inventory. Good value if the product details are confirmed.",
-      buyScore: 78
-    },
-    reviewSummary: {
-      pros: [],
-      cons: [],
-      rating: 0
-    },
-    similar: [
-      {
-        description:
-          "Women's Casual Classic Mid Rise Bootcut Jeans",
-        price: "$41.65",
-        title: "Levi's",
-        url: "https://www.macys.com/shop/product/levis-womens-casual-classic-mid-rise-bootcut-jeans?ID=5085731&swatchColor=Island%20Rinse"
-      },
-      {
-        description: "",
-        price: "",
-        title: "AI Sidebar Widget",
-        url: "chrome-extension://mfchgdpmkaikidbppjajegpphpehainc/index.html"
-      }
-    ]
-  };
-});
+// onMounted(() => {
+//   result.value = {
+//     analysis: {
+//       summary:
+//         "Deeply discounted men’s waterproof/hiker-style boots with solid reviews but unclear branding due to mixed product info.",
+//       pros: [
+//         "Very low price at $19.99",
+//         "High original MSRP ($210) implies strong value if authentic",
+//         "4.2 rating across 500+ reviews",
+//         "Waterproof/hiker design suitable for varied weather"
+//       ],
+//       cons: [
+//         "Brand confusion between Timberland and Weatherproof Vintage",
+//         "Possible mismatch between title and actual product",
+//         "Deep discount may indicate limited sizes, colors, or overstock"
+//       ],
+//       hiddenIssues: [
+//         "Potential listing error due to conflicting product names",
+//         "Authenticity or model accuracy needs verification",
+//         "Return policy and warranty unclear"
+//       ],
+//       alternatives: [
+//         "Levi's hiking or work boots",
+//         "Timberland official 6-inch Premium Boots directly from Timberland",
+//         "Weatherproof Vintage Jace Hiker Boots from verified retailers"
+//       ],
+//       priceInsight:
+//         "A 75% discount down to $19.99 is unusually low for any boot originally listed at $210, strongly suggesting clearance or last-season inventory. Good value if the product details are confirmed.",
+//       buyScore: 78
+//     },
+//     reviewSummary: {
+//       pros: [],
+//       cons: [],
+//       rating: 0
+//     },
+//     similar: [
+//       {
+//         description:
+//           "Women's Casual Classic Mid Rise Bootcut Jeans",
+//         price: "$41.65",
+//         title: "Levi's",
+//         url: "https://www.macys.com/shop/product/levis-womens-casual-classic-mid-rise-bootcut-jeans?ID=5085731&swatchColor=Island%20Rinse"
+//       },
+//       {
+//         description: "",
+//         price: "",
+//         title: "AI Sidebar Widget",
+//         url: "chrome-extension://mfchgdpmkaikidbppjajegpphpehainc/index.html"
+//       }
+//     ]
+//   };
+// });
 </script>
 
 
