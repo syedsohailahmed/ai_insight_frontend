@@ -9,7 +9,7 @@
       Analyzing product...
     </div>
 
-    <p v-if="!loading" class="text-sm text-justify text-gray-700 mt-4 mb-4">
+    <p v-if="!loading && !result" class="text-sm text-justify text-gray-700 mt-4 mb-4">
       <span class="font-bold">AI Product Analyzer </span>helps you instantly understand any product you’re viewing. It summarizes real customer reviews
       from that exact page, highlights pros & cons, generates an overall verdict, and even finds similar products using
       AI-powered vector search. No more scrolling — get clear insights in seconds.
